@@ -32,7 +32,7 @@ A snaphot of the data modeing star schema
 
 # Data Source
 
-![Data](Datasets/Plant%20co.DTS.xls)
+![Data](https://github.com/alabiibrahim/Plant-Co.-Global-Performance/blob/main/Datasets/Plant%20co.DTS.xls)
 
 ## Tools
 
