@@ -47,18 +47,17 @@ A snaphot of the data modeing star schema
 
 - Map - Shows the global YTD Sales, Quantity and GP %  by country, providing a spatial understanding of the company's market footprint.
 
-- Stacked chart - helps show the break down performance by product type (Indoor, Landscape, Outdoor).
+- Stacked Bar chart - Helps show the break down performance by product type (Indoor, Landscape, Outdoor).
 
-- Column chart - display the breakdown performance by Product Size (Small, Medium, Large)
+- Column chart - Display the breakdown performance by Product Size (Small, Medium, Large)
 
 # Dashboard
 
+
 # Stages 
-- Load data to Power Query.
-- Standardize data-types
-- Data modeling
-- Turn charts into visuals
-- Share reports and findings 
+- Load data to Power Query, Standardize data-types and remove duplicates.
+- Create a 'calendar' table and toggle button to view across 3 pillars of business. (Quantity, Sales and Gross Profit).
+- Data modeling. Create DAX measures. 
 
 
 # Processing & Transformation
@@ -74,15 +73,7 @@ GP% = DIVIDE([Total Gross Profit], [Total Sales])
 
 # Insights , Findings
 
-- Year-to-Date (YTD) vs. Prior Year (PYTD) Analysis
-Performance Tracking: A primary KPI section tracks total YTD Sales ($13.00M) against PYTD ($13.51M), highlighting a negative variance of $512K.
-
-2. Account Profitability Segmentation
-
-Dynamic Filtering: The implementation of x-axis and y-axis sliders allows for real-time segmentation of the customer base.
-
-3. Product & Regional Performanc
-
+- Total YTD Sales ($13M) against PYTD ($13.51M), highlighting a negative variance of $512K.
 
 Sales Performance ($13.00M YTD)
 Goal: Monitor top-line revenue health.
