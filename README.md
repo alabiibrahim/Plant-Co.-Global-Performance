@@ -1,4 +1,4 @@
-# Plant-Co.-Global-Performance
+# Plant Co. Global Performance
 
 
 ##   Table of Contents
@@ -11,10 +11,10 @@
 - [Dashboards](#Dashboard)
 - [Chart types and why](#ChartTypesandWhy?)
 - [Stages](#Stages)
-- [Data processing & Transformation](#DAX-Implementation)
+- [Data Transformation](#Transformation)
 - [Findings](#Findings)
 - [Recommendations](#Recommendations)
-- [challenges&solution](#chalenges&solution)
+- [challenges&solution](#Chalenges&Solution)
 
 
 
@@ -60,6 +60,7 @@ A snaphot of the data modeing star schema
 
 
 # Dashboard
+
 ![Dashboard](Images/Plant1.PNG)
 
 ![Dashboard](Images/Plant2.PNG)
@@ -67,7 +68,7 @@ A snaphot of the data modeing star schema
 ![Dashboard](Images/Plant3.PNG)
 
 
-# Processing & Transformation
+# Data Transformation
 
 Data Modeling: Created a star schema to ensure optimized performance and accurate filtering across multiple dimensions (Time, Product, Geography).
 
