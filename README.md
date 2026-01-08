@@ -32,10 +32,13 @@ This Power BI project provides a 360-degree view of Plant Co.’s 2023 performan
 # Questions
 
 
-# Tools
+## Tools
+
+| Tools | Purpose | 
 
 | --- | --- | 
-| Power BI , DAX, Power Query | 
+
+| Power BI | DAX, Power Query | 
 
 
 # Dashboard
