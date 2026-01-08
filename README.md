@@ -14,7 +14,7 @@
 - [Data processing & Transformation](#DAX-Implementation)
 - [Insights & Findings](#Insights)
 - [Recommendations](#Recommendations)
-- [challenges and solution](#chalengesandsolution)
+- [challenges&solution](#chalenges&solution)
 
 
 
@@ -60,7 +60,11 @@ A snaphot of the data modeing star schema
 
 
 # Dashboard
+![Dashboard](Images/Plant1.PNG)
 
+![Dashboard](Images/Plant2.PNG)
+
+![Dashboard](Images/Plant3.PNG)
 
 
 # Processing & Transformation
