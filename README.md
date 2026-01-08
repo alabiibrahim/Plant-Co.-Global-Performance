@@ -8,7 +8,7 @@
 - [Key Questions to Answer](#KeyQuestionstoanswer)
 - [Data source](#Datasource)
 - [Tools](#Tools)
-- [Dashboard](#Dashboard)
+- [Dashboard & Charts](#Dashboard)
 - [Stages](#Stages)
 - [Data processing & Transformation](#DAX-Implementation)
 - [Insights & Findings](#Insights)
@@ -37,8 +37,21 @@ A snaphot of the data modeing star schema
 | Power BI | DAX, Power Query | 
 
 
-# Dashboard
+# Chart types and Why? 
 
+- Card Visuals - Shows the KPIs metrics (YTD, PYTD and GP%), and also the dynamic report title.
+
+- Scatter Charts - Shows accouint segmentation by GP % vs Sales. This allows stakeholders to identify high-volume, low-margin "risk" accounts versus high-margin "premium" accounts.
+
+- Waterfall charts - Shows the "YTD vs PYTD" comparison by Month, to provide a clear narrative of seasonal fluctuations.
+
+- Map - Shows the global YTD Sales, Quantity and GP %  by country, providing a spatial understanding of the company's market footprint.
+
+- Stacked chart - helps show the break down performance by product type (Indoor, Landscape, Outdoor).
+
+- Column chart - display the breakdown performance by Product Size (Small, Medium, Large)
+
+# Dashboard
 
 # Stages 
 - Load data to Power Query.
@@ -64,17 +77,12 @@ GP% = DIVIDE([Total Gross Profit], [Total Sales])
 - Year-to-Date (YTD) vs. Prior Year (PYTD) Analysis
 Performance Tracking: A primary KPI section tracks total YTD Sales ($13.00M) against PYTD ($13.51M), highlighting a negative variance of $512K.
 
-Waterfall Analysis: The "Sales YTD vs PYTD by Month" waterfall chart provides a clear narrative of seasonal fluctuations, showing significant monthly dips in February and November.
-
 2. Account Profitability Segmentation
-Scatter Plot Analysis: I used a scatter plot to segment accounts by Gross Profit % vs. Sales. This allows stakeholders to identify high-volume, low-margin "risk" accounts versus high-margin "premium" accounts.
 
 Dynamic Filtering: The implementation of x-axis and y-axis sliders allows for real-time segmentation of the customer base.
 
-3. Product & Regional Performance
-Product Categorization: Stacked bar charts break down performance by product type (Indoor, Landscape, Outdoor) and Product Size (Small, Medium, Large).
+3. Product & Regional Performanc
 
-Geospatial Mapping: A global map visualization tracks YTD sales by country, providing a spatial understanding of the company's market footprint across North America, Europe, and Asia.
 
 Sales Performance ($13.00M YTD)
 Goal: Monitor top-line revenue health.
