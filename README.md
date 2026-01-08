@@ -5,10 +5,11 @@
 
 - [Project brief](#Projectbrief)
 - [Data Architecture](#DataArchitecture)
-- [Key Questions to Answer](#KeyQuestionstoanswer)
+- [Questions](#Questions)
 - [Data source](#Datasource)
 - [Tools](#Tools)
-- [Dashboard & Charts](#Dashboard)
+- [Dashboards](#Dashboard)
+- [Chart types and why](#ChartTypesandWhy)
 - [Stages](#Stages)
 - [Data processing & Transformation](#DAX-Implementation)
 - [Insights & Findings](#Insights)
@@ -37,6 +38,12 @@ A snaphot of the data modeing star schema
 | Power BI | DAX, Power Query | 
 
 
+# Stages 
+- Load data to Power Query, Standardize data-types and remove duplicates.
+- Create a 'calendar' table and toggle button to view across 3 pillars of business. (Quantity, Sales and Gross Profit).
+- Data modeling. Create DAX measures. 
+
+
 # Chart types and Why? 
 
 - Card Visuals - Shows the KPIs metrics (YTD, PYTD and GP%), and also the dynamic report title.
@@ -51,16 +58,13 @@ A snaphot of the data modeing star schema
 
 - Column chart - Display the breakdown performance by Product Size (Small, Medium, Large)
 
+
 # Dashboard
 
 
-# Stages 
-- Load data to Power Query, Standardize data-types and remove duplicates.
-- Create a 'calendar' table and toggle button to view across 3 pillars of business. (Quantity, Sales and Gross Profit).
-- Data modeling. Create DAX measures. 
-
 
 # Processing & Transformation
+
 Data Modeling: Created a star schema to ensure optimized performance and accurate filtering across multiple dimensions (Time, Product, Geography).
 
 DAX Calculations: Developed complex DAX measures for Time Intelligence, including:
@@ -71,29 +75,38 @@ PYTD Sales = CALCULATE([YTD Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
 
 GP% = DIVIDE([Total Gross Profit], [Total Sales])
 
+
 # Insights , Findings
 
-- Total YTD Sales ($13M) against PYTD ($13.51M), highlighting a negative variance of $512K.
+- Sales ($13.00M YTD). Quantity (555.66K Units YTD). Gross Profit ($5.15M YTD).
 
-Sales Performance ($13.00M YTD)
-Goal: Monitor top-line revenue health.
+- Despite a strong Q2, a significant dip in November (-$0.23M) contributed to a total YTD deficit of $512K compared to the prior year.
 
-Key Finding: Despite a strong Q2, a significant dip in November (-$0.23M) contributed to a total YTD deficit of $512K compared to the prior year.
+- While Sales and Gross Profit are down, Quantity is actually UP by 17K units. This indicates that the company is moving more products but at lower price points or higher costs, a critical insight for the pricing strategy team.
 
-2. Global Quantity Performance (555.66K Units YTD)
-Goal: Track inventory movement and market demand.
+- The Gross Profit margin remains stable at 39.62%, though total profit is down $265K YTD, driven largely by the "Large" and "Medium" product segments.
 
-Key Finding: While Sales and Gross Profit are down, Quantity is actually UP by 17K units. This indicates that the company is moving more products but at lower price points or higher costs, a critical insight for the pricing strategy team.
-
-3. Gross Profit Performance ($5.15M YTD)
-Goal: Analyze bottom-line efficiency.
-
-Key Finding: The Gross Profit margin remains stable at 39.62%, though total profit is down $265K YTD, driven largely by the "Large" and "Medium" product segments.
 
 # Recommendations
 
-Pricing Analysis: Since unit volume (Quantity) is up but Revenue is down, the company should investigate if aggressive discounting or a shift toward "Small" lower-priced products is eroding the top line.
+- Since Quantity is up but Revenue is down, the company should investigate if aggressive discounting or a shift toward "Small" lower-priced products is eroding the top line.
 
-Product Strategy: The "Large" product size category shows significant YTD vs PYTD variance; a targeted campaign for large-scale landscape products could recover the $512K sales gap.
+- The "Large" product size category shows significant YTD vs PYTD variance; a targeted campaign for large-scale landscape products could recover the $512K sales gap.
 
-Regional Focus: High-density sales clusters in Europe suggest a strong market fit; expanding successful European marketing tactics to underperforming regions could stabilize Q4 results.
+- High-density sales clusters in Europe suggest a strong market fit; expanding successful European marketing tactics to underperforming regions could stabilize Q4 results.
+
+
+# Challenges & Solution 
+
+1. The stakeholders needed to see Sales, Quantity, and Gross Profit performance, but putting all three on one page created a cluttered and "noisy" dashboard that was hard to read.
+
+- How I solved it: I implemented a Dynamic Metric Toggle using DAX and Bookmarks. This allowed the user to switch the entire context of the page with one click, maintaining a clean and simple report while providing three times the analytical depth.
+
+2. Standard YTD functions can sometimes fail if the fiscal calendar is non-standard or if there are gaps in the data, leading to misleading variance figures.
+
+- How I solved it: I built a robust Date Dimension Table and utilized SAMEPERIODLASTYEAR combined with TOTALYTD logic to ensure the waterfall charts accurately reflected "Apple-to-Apple" comparisons for the $512K sales variance.
+
+3. With hundreds of accounts, a standard bar chart was insufficient for identifying profitability outliers.
+
+- How I solved it: I utilized a Scatter Plot with a Profitability Quadrant. By adding a constant line at the 20K sales mark and a GP% axis, I created an instant visual diagnostic tool to separate "High-Volume/Low-Margin" accounts from "Premium" partners.
+
