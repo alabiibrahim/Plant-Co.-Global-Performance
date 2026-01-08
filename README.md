@@ -9,10 +9,10 @@
 - [Data source](#Datasource)
 - [Tools](#Tools)
 - [Dashboards](#Dashboard)
-- [Chart types and why](#ChartTypesandWhy)
+- [Chart types and why](#ChartTypesandWhy?)
 - [Stages](#Stages)
 - [Data processing & Transformation](#DAX-Implementation)
-- [Insights & Findings](#Insights)
+- [Findings](#Findings)
 - [Recommendations](#Recommendations)
 - [challenges&solution](#chalenges&solution)
 
@@ -80,7 +80,7 @@ PYTD Sales = CALCULATE([YTD Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
 GP% = DIVIDE([Total Gross Profit], [Total Sales])
 
 
-# Insights , Findings
+# Findings
 
 - Sales ($13.00M YTD). Quantity (555.66K Units YTD). Gross Profit ($5.15M YTD).
 
@@ -104,13 +104,13 @@ GP% = DIVIDE([Total Gross Profit], [Total Sales])
 
 1. The stakeholders needed to see Sales, Quantity, and Gross Profit performance, but putting all three on one page created a cluttered and "noisy" dashboard that was hard to read.
 
-- How I solved it: I implemented a Dynamic Metric Toggle using DAX and Bookmarks. This allowed the user to switch the entire context of the page with one click, maintaining a clean and simple report while providing three times the analytical depth.
+  - How I solved it: I created a "Slicer Table" for easy toggling between 3 key pillars of business using DAX. This allowed the user to switch the entire context of the page with one click, maintaining a clean and simple report while providing three times the analytical depth.
 
 2. Standard YTD functions can sometimes fail if the fiscal calendar is non-standard or if there are gaps in the data, leading to misleading variance figures.
 
-- How I solved it: I built a robust Date Dimension Table and utilized SAMEPERIODLASTYEAR combined with TOTALYTD logic to ensure the waterfall charts accurately reflected "Apple-to-Apple" comparisons for the $512K sales variance.
+  - How I solved it: I created a Date Table and utilized SAMEPERIODLASTYEAR combined with TOTALYTD logic to ensure the waterfall charts accurately show comparisons for the $512K sales variance.
 
 3. With hundreds of accounts, a standard bar chart was insufficient for identifying profitability outliers.
 
-- How I solved it: I utilized a Scatter Plot with a Profitability Quadrant. By adding a constant line at the 20K sales mark and a GP% axis, I created an instant visual diagnostic tool to separate "High-Volume/Low-Margin" accounts from "Premium" partners.
+  - How I solved it: I used a Scatter Plot with a Profitability Quadrant. By adding a constant line at the 20K sales mark and a GP% axis, I created an instant visual diagnostic tool to separate "High-Volume/Low-Margin" accounts from "Premium" partners.
 
