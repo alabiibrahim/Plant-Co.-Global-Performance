@@ -30,6 +30,9 @@ A snaphot of the data modeing star schema
 
 # Questions
 
+# Data Source
+
+![Data](Datasets/Plant%20co.DTS.xls)
 
 ## Tools
 
