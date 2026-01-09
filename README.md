@@ -195,9 +195,11 @@ Here are the DAX formulas used in this project:
 
     - How I solved it: I created a "Slicer Table" for easy toggling between 3 key pillars of business using DAX. This allowed the user to switch the entire context of the page with one click, maintaining a clean and simple report while providing three times the analytical depth.
 
+
 2. Standard YTD functions can sometimes fail if the fiscal calendar is non-standard or if there are gaps in the data, leading to misleading variance figures.
 
     - How I solved it: I created a Date Table and utilized SAMEPERIODLASTYEAR combined with TOTALYTD logic to ensure the waterfall charts accurately show comparisons for the $512K sales variance.
+
 
 3. With hundreds of accounts, a standard bar chart was insufficient for identifying profitability outliers.
 
