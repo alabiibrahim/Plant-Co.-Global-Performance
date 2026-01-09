@@ -12,7 +12,7 @@
 - [Dashboards](#Dashboard)
 - [Chart types and why](#ChartTypesandWhy?)
 - [Stages](#Stages)
-- [Data Transformation](#Transformation)
+- [Data Transformation](#DataTransformation)
 - [Findings](#Findings)
 - [Recommendations](#Recommendations)
 - [challenges&solution](#Chalenges&Solution)
@@ -57,6 +57,23 @@ This project is built on a Star Schema architecture, optimized for analytical pe
 
 
 ## Questions
+ Overall Performance & Growth: Is Plant Co. growing or shrinking?
+
+- How did our 2023 YTD Sales perform compared to the same period last year?What is the exact dollar value of our performance gap?
+
+- Are we selling more but making less? Is our Gross Profit margin of stable, or has it eroded since the previous year?
+
+- Which customers are our Whales (High Volume/High Profit versus our Resource Drainers (High Volume/Low Profit)?
+
+- Which accounts are falling below our profitability threshold?
+
+- Which product segment is responsible for the largest profit decline?
+
+- We sold 17K more units this year—why didn't our revenue increase accordingly?
+
+- Which global regions are currently our strongest growth engines?
+
+- In which specific months did we lose our momentum?
 
 
 ## Data Source
@@ -104,31 +121,26 @@ This project is built on a Star Schema architecture, optimized for analytical pe
 
 Here are the DAX formulas used in this project:
 
-- Sales = SUM('Fact'Sales_USD)
+- Sales = SUM('Fact'[Sales_USD])
         - This measure total all sales values from the Fact table.  
 
-- Qty = SUM('Fact'Quantity)
+- Qty = SUM('Fact'[Quantity])
         - This measure total all quantity from the Fact table.
 
-- COGs = SUM('Fact'COGS_USD)
+- COGs = SUM('Fact'[COGS_USD])
         - This measure total the Cost of Good sold from the Fact table  
 
 - GrossProfit = COGs - Sales
         - This measure subtract the COGs from Sales to get the Gross Profit.
 
 - YTD Sales = TOTALYTD('Measures'[Sales], 'Calendar'[Date]) 
-        - This measure calculate the sales value from the start of the year to the end. 
+        - This measure is used to calculate the YTD sales, quantity, and gross profit from the start of the year to the end. 
 
 - PYTD Sales = CALCULATE([YTDSales], SAMEPERIODLASTYEAR('Calendar'[Date]))
-      - This measure calculate the YoY comparison. Just as seen in the waterfall chart.
+      - This measure is used to calculate the YoY comparison of sales, quantity, and gross profit. Just as seen in the waterfall chart.
 
-GP% = DIVIDE([GrossProfit], [Sales])
-
-// Calculate Sales for the same period last year
-Sales PYTD = CALCULATE([Sales YTD], SAMEPERIODLASTYEAR('Calendar'[Date]))
-
-// Calculate Quantity for the same period last year
-Quantity PYTD = CALCULATE([Qty YTD], SAMEPERIODLASTYEAR('Calendar'[Date]))
+- GP% = DIVIDE([GrossProfit], [Sales])
+        - This measure is used to calculate the GP %. 
 
 
 ## Findings
