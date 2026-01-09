@@ -109,6 +109,8 @@ This project is built on a Star Schema architecture, optimized for analytical pe
 
 
 ## Dashboard
+ 
+ This dashboard allows the Sales Director to pivot from 'General Observation' to 'Targeted Action' for example, specifically investigating the November slump or renegotiating low-margin accounts identified in the scatter plot.
 
 ![Dashboard](Images/Plant1.PNG)
 
@@ -204,4 +206,7 @@ Here are the DAX formulas used in this project:
 3. With hundreds of accounts, a standard bar chart was insufficient for identifying profitability outliers.
 
     - How I solved it: I used a Scatter Plot with a Profitability Quadrant. By adding a constant line at the 20K sales mark and a GP% axis, I created an instant visual diagnostic tool to separate "High-Volume/Low-Margin" accounts from "Premium" partners.
+
+
+
 
