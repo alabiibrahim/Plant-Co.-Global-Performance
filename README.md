@@ -27,11 +27,39 @@ The dashboard provides a detailed breakdown experience, allowing stakeholders to
 
 
 ## Data Architecture 
-A snaphot of the data modeing star schema
 
-# Questions
+![DataModeling](Images/Data%20Modeling.PNG)
 
-# Data Source
+This project is built on a Star Schema architecture, optimized for analytical performance, scalable reporting, and reliable DAX calculations in Power BI.
+
+- Fact Table: contains transactional sales data acting as a central table connecting all business dimensions with key metrics (Quantity, Sales, COGs). 
+
+- Plant_Products Table: This here contains the product attributes and hierarchy to help in analysis with product size, type, group e.t.c
+
+- Accounts Table: Contains customer and account information includes geographic and location for regional a nalysis.
+
+- Calendar Table: Created to help in time intelligence analysis. It helps in calculating YTD, PYTD and SAMEPERIODLASTYEAR.
+
+- Measures Table: This is not connected to other table but used for all DAX measures to help in reusability, readability.
+
+- Slic_Values: This is also diconnected from other tables. It helps in calculating dynamic slicers measures and a conditional measures.Also, this slicers is not connected intentionally as to be flexible.
+
+
+### Benefit of data modeling
+
+- Improves query performance and report responsiveness
+
+- Simplifies DAX logic by enforcing a single-direction filter flow
+
+- Ensures accurate time-intelligence calculations
+
+- Follows industry best practices for Power BI and enterprise BI solutions.
+
+
+## Questions
+
+
+## Data Source
 
 ![Data](https://github.com/alabiibrahim/Plant-Co.-Global-Performance/blob/main/Datasets/Plant%20co.DTS.xls)
 
