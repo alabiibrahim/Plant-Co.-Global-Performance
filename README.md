@@ -1,5 +1,6 @@
 # Plant Co. Global Performance
 
+![GIF](Images/PlanGIF.gif)
 
 ##   Table of Contents
 
