@@ -19,14 +19,14 @@
 
 
 
-# Project brief 
+## Project brief 
 
 This project features a 3 page, interactive Power BI dashboard designed for Plant Co. to monitor global performance across three key business pillars: Sales, Quantity, and Gross Profit.
 
 The dashboard provides a detailed breakdown experience, allowing stakeholders to identify not just what happened in 2023, but why it happened by comparing Year-to-Date (YTD) performance against the Previous Year (PYTD).
 
 
-# Data Architecture 
+## Data Architecture 
 A snaphot of the data modeing star schema
 
 # Questions
@@ -42,13 +42,13 @@ A snaphot of the data modeing star schema
 | Power BI | DAX, Power Query | 
 
 
-# Stages 
+## Stages 
 - Load data to Power Query, Standardize data-types and remove duplicates.
 - Create a 'calendar' table and toggle button to view across 3 pillars of business. (Quantity, Sales and Gross Profit).
 - Data modeling. Create DAX measures. 
 
 
-# Chart types and Why? 
+## Chart types and Why? 
 
 - Card Visuals - Shows the KPIs metrics (YTD, PYTD and GP%), and also the dynamic report title.
 
@@ -63,7 +63,7 @@ A snaphot of the data modeing star schema
 - Column chart - Display the breakdown performance by Product Size (Small, Medium, Large)
 
 
-# Dashboard
+## Dashboard
 
 ![Dashboard](Images/Plant1.PNG)
 
@@ -72,7 +72,7 @@ A snaphot of the data modeing star schema
 ![Dashboard](Images/Plant3.PNG)
 
 
-# Data Transformation
+## Data Transformation
 
 Data Modeling: Created a star schema to ensure optimized performance and accurate filtering across multiple dimensions (Time, Product, Geography).
 
@@ -85,7 +85,7 @@ PYTD Sales = CALCULATE([YTD Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
 GP% = DIVIDE([Total Gross Profit], [Total Sales])
 
 
-# Findings
+## Findings
 
 - Sales ($13.00M YTD). Quantity (555.66K Units YTD). Gross Profit ($5.15M YTD).
 
@@ -96,7 +96,7 @@ GP% = DIVIDE([Total Gross Profit], [Total Sales])
 - The Gross Profit margin remains stable at 39.62%, though total profit is down $265K YTD, driven largely by the "Large" and "Medium" product segments.
 
 
-# Recommendations
+## Recommendations
 
 - Since Quantity is up but Revenue is down, the company should investigate if aggressive discounting or a shift toward "Small" lower-priced products is eroding the top line.
 
@@ -105,17 +105,17 @@ GP% = DIVIDE([Total Gross Profit], [Total Sales])
 - High-density sales clusters in Europe suggest a strong market fit; expanding successful European marketing tactics to underperforming regions could stabilize Q4 results.
 
 
-# Challenges & Solution 
+## Challenges & Solution 
 
 1. The stakeholders needed to see Sales, Quantity, and Gross Profit performance, but putting all three on one page created a cluttered and "noisy" dashboard that was hard to read.
 
-  - How I solved it: I created a "Slicer Table" for easy toggling between 3 key pillars of business using DAX. This allowed the user to switch the entire context of the page with one click, maintaining a clean and simple report while providing three times the analytical depth.
+    - How I solved it: I created a "Slicer Table" for easy toggling between 3 key pillars of business using DAX. This allowed the user to switch the entire context of the page with one click, maintaining a clean and simple report while providing three times the analytical depth.
 
 2. Standard YTD functions can sometimes fail if the fiscal calendar is non-standard or if there are gaps in the data, leading to misleading variance figures.
 
-  - How I solved it: I created a Date Table and utilized SAMEPERIODLASTYEAR combined with TOTALYTD logic to ensure the waterfall charts accurately show comparisons for the $512K sales variance.
+    - How I solved it: I created a Date Table and utilized SAMEPERIODLASTYEAR combined with TOTALYTD logic to ensure the waterfall charts accurately show comparisons for the $512K sales variance.
 
 3. With hundreds of accounts, a standard bar chart was insufficient for identifying profitability outliers.
 
-  - How I solved it: I used a Scatter Plot with a Profitability Quadrant. By adding a constant line at the 20K sales mark and a GP% axis, I created an instant visual diagnostic tool to separate "High-Volume/Low-Margin" accounts from "Premium" partners.
+    - How I solved it: I used a Scatter Plot with a Profitability Quadrant. By adding a constant line at the 20K sales mark and a GP% axis, I created an instant visual diagnostic tool to separate "High-Volume/Low-Margin" accounts from "Premium" partners.
 
