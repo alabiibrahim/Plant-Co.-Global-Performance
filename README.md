@@ -145,22 +145,48 @@ Here are the DAX formulas used in this project:
 
 ## Findings
 
-- Sales ($13.00M YTD). Quantity (555.66K Units YTD). Gross Profit ($5.15M YTD).
+1. Plant Co. achieved a total YTD Sales revenue of $13.00M, which represents a $512K decrease compared to the previous year’s performance of $13.51M.
 
-- Despite a strong Q2, a significant dip in November (-$0.23M) contributed to a total YTD deficit of $512K compared to the prior year.
+2. Despite the drop in revenue, the total Quantity sold actually increased by 17K units (556K vs 539K), suggesting a shift toward lower-priced products or a more aggressive discounting strategy.
 
-- While Sales and Gross Profit are down, Quantity is actually UP by 17K units. This indicates that the company is moving more products but at lower price points or higher costs, a critical insight for the pricing strategy team.
+3. Gross Profit reached $5.15M with a consistent margin of 39.62%, though the total profit dollar value is down by $265K compared to the prior year.
 
-- The Gross Profit margin remains stable at 39.62%, though total profit is down $265K YTD, driven largely by the "Large" and "Medium" product segments.
+4. The Sales waterfall analysis identifies February and November as the most critical months of decline, where performance significantly deviated from the prior year's trends.
+
+5. Product segmentation reveals that the 'Outdoor' category and 'Large' product sizes are the primary drivers of the year-over-year value gap, whereas 'Indoor' and 'Small' products remain high-volume anchors.
+
+6. The Account Profitability scatter plot indicates a high concentration of accounts below the 40% gross profit threshold, highlighting a major opportunity for margin optimization.
+
+7. Geographical data shows that while sales are distributed globally, the European and North American markets contribute the highest density of transaction volume.
+
+8. The 'Small' product size segment is the volume leader, moving 202K units, yet it does not generate enough revenue to offset the losses seen in the 'Large' product category.
+
+9. There is a clear disconnect between sales activity and profitability in specific mid-tier accounts, where high quantity sold is not translating into proportional gross profit growth.
+
+10. The 2023 fiscal year performance suggests that while market reach is expanding (higher unit sales), the company needs to re-evaluate its pricing architecture to recover lost revenue and profit margins.
 
 
 ## Recommendations
 
-- Since Quantity is up but Revenue is down, the company should investigate if aggressive discounting or a shift toward "Small" lower-priced products is eroding the top line.
+1. Launch a "Premium Recovery" campaign targeting the 'Large' product segment to reclaim the YTD profit deficit identified in the performance waterfall.
 
-- The "Large" product size category shows significant YTD vs PYTD variance; a targeted campaign for large-scale landscape products could recover the $512K sales gap.
+2. Conduct a deep-dive pricing audit to determine if the 17K increase in unit volume is being undercut by excessive discounting or "loss leader" pricing strategies.
 
-- High-density sales clusters in Europe suggest a strong market fit; expanding successful European marketing tactics to underperforming regions could stabilize Q4 results.
+3. Initiate a sales team review for the month of November to identify external market factors or internal process gaps that led to the significant recurring annual performance dip.
+
+4. Implement a tiered account management strategy that prioritizes the high-volume/high-margin "Whale" accounts identified in the profitability scatter plot.
+
+5. Re-negotiate terms or adjust service levels for accounts currently falling in the "Low-Margin/High-Volume" quadrant to improve overall Gross Profit percentage.
+
+6. Develop a localized marketing push in the European and North American hubs to capitalize on existing high sales density and maximize economies of scale.
+
+7. Perform a "Product Mix Optimization" analysis to transition customers from lower-value 'Small' units into higher-margin 'Medium' or 'Large' alternatives.
+
+8. Establish an automated "Early Warning System" in Power BI that triggers alerts when monthly Gross Profit falls more than 5% below the Prior Year (PYTD) benchmark.
+
+9. Review supply chain and logistics costs associated with 'Outdoor' products to identify if rising operational expenses are the root cause of the profit decline in that category.
+
+10. Schedule quarterly "Profitability Workshops" with the regional sales heads to review the dashboard insights and align on specific targets for the upcoming quarter.
 
 
 ## Challenges & Solution 
