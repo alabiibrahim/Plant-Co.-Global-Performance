@@ -102,15 +102,33 @@ This project is built on a Star Schema architecture, optimized for analytical pe
 
 ## Data Transformation
 
-Data Modeling: Created a star schema to ensure optimized performance and accurate filtering across multiple dimensions (Time, Product, Geography).
+Here are the DAX formulas used in this project:
 
-DAX Calculations: Developed complex DAX measures for Time Intelligence, including:
+- Sales = SUM('Fact'Sales_USD)
+        - This measure total all sales values from the Fact table.  
 
-YTD Sales = TOTALYTD(SUM(Sales[Amount]), 'Calendar'[Date])
+- Qty = SUM('Fact'Quantity)
+        - This measure total all quantity from the Fact table.
 
-PYTD Sales = CALCULATE([YTD Sales], SAMEPERIODLASTYEAR('Calendar'[Date]))
+- COGs = SUM('Fact'COGS_USD)
+        - This measure total the Cost of Good sold from the Fact table  
 
-GP% = DIVIDE([Total Gross Profit], [Total Sales])
+- GrossProfit = COGs - Sales
+        - This measure subtract the COGs from Sales to get the Gross Profit.
+
+- YTD Sales = TOTALYTD('Measures'[Sales], 'Calendar'[Date]) 
+        - This measure calculate the sales value from the start of the year to the end. 
+
+- PYTD Sales = CALCULATE([YTDSales], SAMEPERIODLASTYEAR('Calendar'[Date]))
+      - This measure calculate the YoY comparison. Just as seen in the waterfall chart.
+
+GP% = DIVIDE([GrossProfit], [Sales])
+
+// Calculate Sales for the same period last year
+Sales PYTD = CALCULATE([Sales YTD], SAMEPERIODLASTYEAR('Calendar'[Date]))
+
+// Calculate Quantity for the same period last year
+Quantity PYTD = CALCULATE([Qty YTD], SAMEPERIODLASTYEAR('Calendar'[Date]))
 
 
 ## Findings
