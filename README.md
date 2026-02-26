@@ -1,11 +1,11 @@
 ### Executive Summary
 
 
-• Challenge: Plant Co. was seeing a dip in YTD profits but couldn't identify which product category was the culprit.
+• **Challenge:** Plant Co. was seeing a dip in YTD profits but couldn't identify which product category was the culprit.
 
-• Action: I built a dynamic dashboard connecting 4 disparate datasets to track real-time performance.
+• **Action:** I built a dynamic dashboard connecting 4 disparate datasets to track real-time performance.
 
-• Result: Identified a 12% loss in the 'Outdoor' category due to supply chain delays, allowing the team to pivot marketing spend.
+• **Result:** Identified a 12% loss in the 'Outdoor' category due to supply chain delays, allowing the team to pivot marketing spend.
 
 
 ![GIF](Images/PlanGIF.gif)
