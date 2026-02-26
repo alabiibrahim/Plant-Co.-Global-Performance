@@ -1,7 +1,7 @@
 ### Executive Summary
 
 
-• **Challenge:** Plant Co. was seeing a dip in YTD profits but couldn't identify which product category was the culprit.
+• **Business Challenge:** Plant Co. was seeing a dip in YTD profits but couldn't identify which product category was the culprit.
 
 • **Action:** I built a dynamic dashboard connecting 4 disparate datasets to track real-time performance.
 
