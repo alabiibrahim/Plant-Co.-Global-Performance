@@ -120,13 +120,12 @@ This project is built on a **Star Schema** architecture, optimized for analytica
  
  This dashboard allows the Sales Director to pivot from 'General Observation' to 'Targeted Action' for example, specifically investigating the November slump or renegotiating low-margin accounts identified in the scatter plot.
 
-![Dashboard](Images/Plant1.PNG)
+![Dashboard](Images/Plant3.PNG)
 
 ![Dashboard](Images/Plant2.PNG)
 
-![Dashboard](Images/Plant3.PNG)
 
-
+![Dashboard](Images/Plant1.PNG)
 ## Data Transformation
 
 Here are the DAX formulas used in this project:
