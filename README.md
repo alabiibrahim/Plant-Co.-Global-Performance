@@ -39,17 +39,17 @@ The dashboard provides a detailed breakdown experience, allowing stakeholders to
 
 ![DataModeling](Images/Data%20Modeling.PNG)
 
-This project is built on a Star Schema architecture, optimized for analytical performance, scalable reporting, and reliable DAX calculations in Power BI.
+This project is built on a **Star Schema** architecture, optimized for analytical performance, scalable reporting, and reliable DAX calculations in Power BI.
 
 - Fact Table: contains transactional sales data acting as a central table connecting all business dimensions with key metrics (Quantity, Sales, COGs). 
 
-- Plant_Products Table: This here contains the product attributes and hierarchy to help in analysis with product size, type, group e.t.c
+- Plant_Products: Contains the product attributes and hierarchy to help in analysis with product size, type, group e.t.c
 
-- Accounts Table: Contains customer and account information includes geographic and location for regional a nalysis.
+- Accounts: Contains customer and account information includes geographic and location for regional a nalysis.
 
-- Calendar Table: Created to help in time intelligence analysis. It helps in calculating YTD, PYTD and SAMEPERIODLASTYEAR.
+- Calendar: It was created to help in time intelligence analysis. It helps in calculating YTD, PYTD and SAMEPERIODLASTYEAR.
 
-- Measures Table: This is not connected to other table but used for all DAX measures to help in reusability, readability.
+- Measures: This is not connected to other table but used for all DAX measures to help in reusability, readability.
 
 - Slic_Values: This is also diconnected from other tables. It helps in calculating dynamic slicers measures and a conditional measures.Also, this slicers is not connected intentionally as to be flexible.
 
@@ -78,27 +78,26 @@ This project is built on a Star Schema architecture, optimized for analytical pe
 
 - Which product segment is responsible for the largest profit decline?
 
-- We sold 17K more units this year—why didn't our revenue increase accordingly?
+- We sold 17K more units this year why didn't our revenue increase accordingly?
 
 - Which global regions are currently our strongest growth engines?
 
 - In which specific months did we lose our momentum?
 
 
-## Data Source
+## Tools & Data
 
-![Data](https://github.com/alabiibrahim/Plant-Co.-Global-Performance/blob/main/Datasets/Plant%20co.DTS.xls)
-
-## Tools
-
-| Tools | Purpose | 
+| Tools | Purpose | Data Source |
 | --- | --- | 
-| Power BI | DAX, Power Query | 
+| Power BI | DAX, Power Query | ![Data](https://github.com/alabiibrahim/Plant-Co.-Global-Performance/blob/main/Datasets/Plant%20co.DTS.xls) |
 
 
 ## Stages 
+
 - Load data to Power Query, Standardize data-types and remove duplicates.
+
 - Create a 'calendar' table and toggle button to view across 3 pillars of business. (Quantity, Sales and Gross Profit).
+
 - Data modeling. Create DAX measures. 
 
 
