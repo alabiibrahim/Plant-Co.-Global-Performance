@@ -88,8 +88,8 @@ This project is built on a **Star Schema** architecture, optimized for analytica
 ## Tools & Data
 
 | Tools | Purpose | Data Source |
-| --- | --- | 
-| Power BI | DAX, Power Query | ![Data](https://github.com/alabiibrahim/Plant-Co.-Global-Performance/blob/main/Datasets/Plant%20co.DTS.xls) |
+| --- | --- | --- |
+| Power BI | DAX, Power Query | ![](https://github.com/alabiibrahim/Plant-Co.-Global-Performance/blob/main/Datasets/Plant%20co.DTS.xls) |
 
 
 ## Stages 
